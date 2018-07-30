@@ -534,7 +534,7 @@ func (c *Context) ShouldBindBodyWith(
 }
 
 // ClientIP implements a best effort algorithm to return the real client IP, it parses
-// X-Real-IP and X-Forwarded-For in order to work properly with reverse-proxies such us: nginx or haproxy.
+// X-Real-IP and X-Forwarded-For in order to work properly with reverse-proxies such as: nginx or haproxy.
 // Use X-Forwarded-For before X-Real-Ip as nginx uses X-Real-Ip with the proxy's IP.
 func (c *Context) ClientIP() string {
 	if c.engine.ForwardedByClientIP {
